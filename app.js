@@ -14,6 +14,9 @@ app.use(bodyParser.json());
 
 app.use('/api/schools', schoolRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the School Management API');
+  });
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
